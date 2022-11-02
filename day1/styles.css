@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c1fffe;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 20px 40px;
+  margin-top: 20px;
+}
+
+.header {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.review-card {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.avatar-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user-avatar {
+  width: 100%;
+}
+
+.user-name {
+  margin: 20px 0 6px 0;
+  text-align: center;
+  font-size: 32px;
+}
+
+.user-job {
+  text-align: center;
+  text-transform: uppercase;
+  color: blue;
+}
+
+.content {
+  margin-top: 20px;
+  color: rgba(12, 133, 247);
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls-prev,
+.controls-next {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.controls-prev:hover,
+.controls-next:hover {
+  color: red;
+}
