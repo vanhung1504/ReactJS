@@ -15,7 +15,18 @@ function UserCard({ user: { fullname, avatar, job } }) {
   );
 }
 
-function UserList({ users }) {
+const UserCardPropType = PropTypes.exact({
+  id: PropTypes.string.isRequired,
+  fullname: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  job: PropTypes.string.isRequired,
+});
+
+UserCard.propTypes = {
+  user: UserCardPropType,
+};
+
+function UserList({ users = [] }) {
   return (
     <div className="users-list-box">
       {users.map((user) => (
@@ -24,6 +35,10 @@ function UserList({ users }) {
     </div>
   );
 }
+
+UserList.propTypes = {
+  users: PropTypes.arrayOf(UserCardPropType),
+};
 
 function App() {
   const users = [
